@@ -1,5 +1,5 @@
-html {
-    height: 100%;
+.startWrapper {
+    height: 100vh;
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
     overflow: hidden;
 }
@@ -62,7 +62,7 @@ html {
     right: 0;
     color: #FFF;
     text-align: center;
-    font-family: "lato", sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-weight: 300;
     font-size: 50px;
     letter-spacing: 10px;
@@ -70,7 +70,7 @@ html {
     padding-left: 10px;
 }
 #title span {
-    background: -webkit-linear-gradient(white, #88a0b7);
+    background: -webkit-linear-gradient(white, #b2d7f3);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 2em;
