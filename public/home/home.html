@@ -7,32 +7,55 @@
       ASCENSION
     </span>
   </div>
-</div>
-<div class="aboutWrapper row">
 
-  <div class="col-sm-4">
+<div class="row infoWrapper">
+  <div id="box1" class="col-sm-4 about">
     <article class="padder-sm">
-      <h3>Ascension</h3>
-      <p>
+      <h3 class="white-label" >Ascension</h3>
+      <p class="white-label">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus eaque necessitatibus ratione tempora voluptatem voluptates. Accusamus aut deleniti dolorum excepturi exercitationem fugiat magni mollitia! Debitis dolor ducimus ipsa repellendus rerum.
       </p>
     </article>
   </div>
-  <div class="col-sm-4">
+  <div id="box2" class="col-sm-4 why">
     <article class="padder-sm">
-      <h3>About</h3>
-      <p>
+      <h3 class="white-label" >About</h3>
+      <p class="white-label">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus eaque necessitatibus ratione tempora voluptatem voluptates. Accusamus aut deleniti dolorum excepturi exercitationem fugiat magni mollitia! Debitis dolor ducimus ipsa repellendus rerum.
       </p>
     </article>
   </div>
-  <div class="col-sm-4">
+  <div id="box3" class="col-sm-4 us">
     <article class="padder-sm">
-      <h3>Why</h3>
-      <p>
+      <h3 class="white-label">Why</h3>
+      <p class="white-label">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus eaque necessitatibus ratione tempora voluptatem voluptates. Accusamus aut deleniti dolorum excepturi exercitationem fugiat magni mollitia! Debitis dolor ducimus ipsa repellendus rerum.
       </p>
+
     </article>
   </div>
 
 </div>
+
+</div>
+
+<script>
+  $( document ).ready(function () {
+
+    var _bounce = setTimeout(bounceOn, 2500);
+
+    function bounceOn() {
+
+      $("#box1").effect( "bounce", {times:1}, 2300, function(){
+        $("#box2").effect( "bounce", {times:1}, 2300, function(){
+          $("#box3").effect( "bounce", {times:1}, 2300);
+
+        });
+      });
+
+      clearInterval(_bounce);
+    }
+
+  });
+
+</script>
