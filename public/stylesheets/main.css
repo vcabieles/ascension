@@ -589,3 +589,21 @@
         width: 14px;
     }
 }
+
+@keyframes flags-unfurl {
+    0% {
+        width: 0;
+    }
+    5105% {
+        width: 0;
+    }
+    60% {
+        width: 14px;
+    }
+    90% {
+        width: 14px;
+    }
+    100% {
+        width: 14px;
+    }
+}
