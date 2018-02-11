@@ -11,7 +11,6 @@ const index = require('./routes/index/index.route'),
       users = require('./routes/users/users.route'),
       neos = require('./routes/neos/neos.route');
 
-
 const app = express();
 
 // view engine setup
