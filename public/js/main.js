@@ -98,10 +98,20 @@ $(function(){
         meshControls.addEventListener("keydown",function(event){
             console.log(event);
             if(event.mouseEvent.key === "w"){
+                //FORWARDS
                 camera.position.z -= 1;
                 camera.updateProjectionMatrix();
             }else if(event.mouseEvent.key === "s"){
+                //Backwards
                 camera.position.z += 1;
+                camera.updateProjectionMatrix();
+            }else if(event.mouseEvent.key === "a"){
+                //LEFT
+                camera.position.x -= 1;
+                camera.updateProjectionMatrix();
+            }else if(event.mouseEvent.key === "d"){
+                //RIGHT
+                camera.position.x += 1;
                 camera.updateProjectionMatrix();
             }
         });
