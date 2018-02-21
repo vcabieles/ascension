@@ -1,9 +1,6 @@
 .idea
 node_modules
-<<<<<<< HEAD
 secrets.js
-=======
 bower_components
 .DS_Store
 
->>>>>>> 32a01333fa1a86cfb73728371b257bdf44f2a9f1
