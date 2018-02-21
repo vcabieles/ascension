@@ -54,7 +54,7 @@ $(function(){
             neo.name = "star "+i;
             neo.material.color = randomColor;
             neo.scale.set(randomSize,randomSize,randomSize);
-            neo.position.set(models.randomNum(1500,-1500),models.randomNum(2500,-2500),models.randomNum(-122,-4000));
+            neo.position.set(models.randomNum(1500,-1500),models.randomNum(2500,-2500),models.randomNum(-800,-4800));
             scene.add(neo)
         }
 
@@ -65,7 +65,7 @@ $(function(){
             neo.name = "star "+i;
             neo.material.color = randomColor;
             neo.scale.set(randomSize,randomSize,randomSize);
-            neo.position.set(models.randomNum(1500,-1500),models.randomNum(2500,-2500),models.randomNum(-122,-4000));
+            neo.position.set(models.randomNum(1500,-1500),models.randomNum(2500,-2500),models.randomNum(4800,800));
             scene.add(neo)
         }
 
@@ -97,6 +97,13 @@ $(function(){
 
         meshControls.addEventListener("keydown",function(event){
             console.log(event);
+            if(event.mouseEvent.key === "w"){
+                camera.position.z -= 1;
+                camera.updateProjectionMatrix();
+            }else if(event.mouseEvent.key === "s"){
+                camera.position.z += 1;
+                camera.updateProjectionMatrix();
+            }
         });
 
     }
