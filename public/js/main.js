@@ -46,52 +46,18 @@ $(function(){
         helper.name = "HemLightHelper";
         scene.add( light );
         scene.add( helper );
-
-        for(let i=0; i<200; i++){
-            let neo = models.newSphere();
-            let randomSize = Math.random();
-            let randomColor = models.colors[Math.floor(Math.random() * 5)];
-            neo.name = "star "+i;
-            neo.material.color = randomColor;
-            neo.scale.set(randomSize,randomSize,randomSize);
-            neo.position.set(models.randomNum(1500,-1500),models.randomNum(2500,-2500),models.randomNum(-800,-4800));
-            scene.add(neo)
-        }
-
-        for(let i=0; i<200; i++){
-            let neo = models.newSphere();
-            let randomSize = Math.random();
-            let randomColor = models.colors[Math.floor(Math.random() * 5)];
-            neo.name = "star "+i;
-            neo.material.color = randomColor;
-            neo.scale.set(randomSize,randomSize,randomSize);
-            neo.position.set(models.randomNum(1500,-1500),models.randomNum(2500,-2500),models.randomNum(4800,800));
-            scene.add(neo)
-        }
-
-        renderer = new THREE.WebGLRenderer( { antialias: true, canvas: arenaDom.element} );
-        renderer.setSize( arenaDom.width(), arenaDom.height() );
-
         //#Controls
         meshControls = new THREE.MeshControls(camera,scene,arenaDom.element);
 
         meshControls.addEventListener("click",function(event){
-
+            console.log(event)
         });
         meshControls.addEventListener("mouseup",function(event){
 
         });
 
-        meshControls.addEventListener("dragend",function(event){
-
-
-        });
-
-        meshControls.addEventListener("dragstart",function(event){
-
-        });
-
-        meshControls.addEventListener("drag",function(event){
+        meshControls.addEventListener("mouseover",function(event){
+            console.log(event);
 
         });
 
@@ -115,6 +81,35 @@ $(function(){
                 camera.updateProjectionMatrix();
             }
         });
+
+        for(let i=0; i<200; i++){
+            let neo = models.newSphere();
+            let randomSize = Math.random();
+            let randomColor = models.colors[Math.floor(Math.random() * 5)];
+            neo.name = "star "+i;
+            neo.material.color = randomColor;
+            neo.scale.set(randomSize,randomSize,randomSize);
+            neo.position.set(models.randomNum(1500,-1500),models.randomNum(2500,-2500),models.randomNum(-800,-4800));
+            meshControls.attach(neo);
+            scene.add(neo)
+        }
+
+        for(let i=0; i<200; i++){
+            let neo = models.newSphere();
+            let randomSize = Math.random();
+            let randomColor = models.colors[Math.floor(Math.random() * 5)];
+            neo.name = "star "+i;
+            neo.material.color = randomColor;
+            neo.scale.set(randomSize,randomSize,randomSize);
+            neo.position.set(models.randomNum(1500,-1500),models.randomNum(2500,-2500),models.randomNum(4800,800));
+            meshControls.attach(neo);
+            scene.add(neo)
+        }
+
+        renderer = new THREE.WebGLRenderer( { antialias: true, canvas: arenaDom.element} );
+        renderer.setSize( arenaDom.width(), arenaDom.height() );
+
+
 
     }
 
